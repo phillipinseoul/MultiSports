@@ -1,2 +1,2 @@
-# MultiSports (2021.02)
+# MultiSports
 * Android Multi-View Application for football.
