@@ -56,8 +56,7 @@
         android:id="@+id/videoView2"
         android:layout_width="match_parent"
         android:layout_height="270dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="130dp"
+        android:layout_alignParentTop="true"
         android:visibility="invisible"
         />
 
@@ -92,7 +91,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignTop="@id/videoView2"
+        android:layout_alignBottom="@id/videoView2"
+        android:layout_marginBottom="-70dp"
         android:text=" Team A      3 - 1      Team B " />
 
     <Button
@@ -102,7 +102,7 @@
         android:layout_alignBottom="@id/scoreText"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="50dp"
-        android:layout_marginBottom="-55dp"
+        android:layout_marginBottom="-60dp"
         android:text="Messi (20')"
         android:textColor="@color/black"
         android:textSize="12dp"
@@ -115,7 +115,7 @@
         android:layout_alignBottom="@id/scoreText"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="50dp"
-        android:layout_marginBottom="-110dp"
+        android:layout_marginBottom="-120dp"
         android:text="Neymar (36')"
         android:textColor="@color/black"
         android:textSize="12dp"
@@ -128,7 +128,7 @@
         android:layout_alignBottom="@id/scoreText"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="50dp"
-        android:layout_marginBottom="-166dp"
+        android:layout_marginBottom="-180dp"
         android:text="Messi (76')"
         android:textColor="@color/black"
         android:textSize="12dp"
@@ -139,7 +139,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/scoreText"
-        android:layout_marginBottom="-55dp"
+        android:layout_marginBottom="-60dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="50dp"
         android:text="Williams (79')"
