@@ -74,23 +74,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Click Goal Replay Button
-        goalBtn = (Button) findViewById(R.id.GoalReplay);
-
-        goalBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                videoView2.setVisibility(RelativeLayout.VISIBLE);
-
-                secondText = (TextView) findViewById(R.id.secondText);
-                secondText.setText(" Goal Replay ");
-
-                videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal_angle5);
-                videoView2.start();
-            }
-        });
-
-
         // Click Change Angle Button
         angleBtn = (Button) findViewById(R.id.ChangeAngle);
 
