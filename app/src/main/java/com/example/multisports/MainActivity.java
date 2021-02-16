@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         VideoView videoView = (VideoView) findViewById(R.id.videoView1);
-        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_full);  // Set the path of the video "messi_full"
+        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);  // Set the path of the video "messi_full"
 
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);         // Link mediaController to videoView
