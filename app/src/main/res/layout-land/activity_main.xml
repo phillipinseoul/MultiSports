@@ -9,13 +9,13 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/Linear1">
 
         <VideoView
             android:id="@+id/videoView1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent" />
     </LinearLayout>
 
@@ -25,8 +25,8 @@
         android:layout_width="90dp"
         android:layout_height="50dp"
         android:textSize="12dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/videoView2"
+        android:layout_alignBottom="@id/videoView2"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="20dp"
         android:text="Multi Angle" />
@@ -34,7 +34,7 @@
 
     <VideoView
         android:id="@+id/videoView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:visibility="invisible"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:layout_alignTop="@id/Linear1"
-        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/Linear1"
         android:background="@color/white"
         android:text=" In-Play " />
 
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/videoView2"
         android:layout_alignTop="@id/videoView2"
         android:background="@color/white"
         android:text="" />
@@ -66,7 +66,7 @@
 
     <TextView
         android:id="@+id/scoreTextA"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textColor="@color/black"
         android:background="@color/white"
         android:layout_width="wrap_content"
@@ -74,15 +74,15 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
-        android:text=" Team A " />
+        android:layout_marginTop="70dp"
+        android:text=" [Team A] " />
 
     <TextView
         android:id="@+id/messi_20_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/scoreTextA"
-        android:layout_marginBottom="-40dp"
+        android:layout_marginBottom="-50dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
         android:background="@color/white"
@@ -96,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/scoreTextA"
-        android:layout_marginBottom="-80dp"
+        android:layout_marginBottom="-100dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
         android:background="@color/white"
@@ -110,7 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/scoreTextA"
-        android:layout_marginBottom="-120dp"
+        android:layout_marginBottom="-150dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
         android:background="@color/white"
@@ -122,24 +122,24 @@
 
     <TextView
         android:id="@+id/scoreTextB"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textColor="@color/black"
         android:background="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/videoView2"
         android:layout_marginRight="20dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
-        android:text=" Team B " />
+        android:layout_marginTop="70dp"
+        android:text=" [Team B] " />
 
     <TextView
         android:id="@+id/williams_79_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/scoreTextB"
-        android:layout_marginBottom="-40dp"
-        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-50dp"
+        android:layout_alignRight="@id/videoView2"
         android:layout_marginRight="20dp"
         android:background="@color/white"
         android:textSize="15dp"
