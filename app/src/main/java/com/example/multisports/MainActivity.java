@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView1);         // Link mediaController to videoView
         videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
+        mediaController.hide();
         videoView1.start();
 
 
@@ -39,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
             public void onCompletion(MediaPlayer mp) {
                 videoView2.setVisibility(RelativeLayout.INVISIBLE);
                 secondText.setText("");
+            }
+        });
+
+        // videoView1 returns to InPlay
+        videoView1.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);
+                videoView1.seekTo(videoTime);
+                videoView1.start();
+                mediaController.hide();
+                firstText.setText(" In-Play ");
             }
         });
 
@@ -53,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 firstText.setText(" In-Play ");
 
                 videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);
+                mediaController.hide();
                 videoView1.seekTo(videoTime);
             }
         });
@@ -90,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 secondText.setText(" Angle #2 ");
 
                 videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal_angle8);
+                videoView2.setVisibility(RelativeLayout.VISIBLE);
                 videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal_angle7);
 
                 videoView1.start();
