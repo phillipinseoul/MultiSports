@@ -10,98 +10,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="match_parent"
         android:id="@+id/Linear1">
 
         <VideoView
             android:id="@+id/videoView1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
     </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/scoreTextA"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp"
-        android:layout_alignBottom="@id/videoView2"
-        android:layout_marginBottom="-80dp"
-        android:text=" [Team A] " />
-
-    <TextView
-        android:id="@+id/messi_20_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextA"
-        android:layout_marginBottom="-60dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp"
-        android:background="@color/white"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:text=" Messi (20') "
-        />
-
-    <TextView
-        android:id="@+id/neymar_36_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextA"
-        android:layout_marginBottom="-120dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp"
-        android:background="@color/white"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:text=" Neymar (36') "
-        />
-
-    <TextView
-        android:id="@+id/messi_76_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextA"
-        android:layout_marginBottom="-180dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp"
-        android:background="@color/white"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:text=" Messi (76') "
-        />
-
-
-    <TextView
-        android:id="@+id/scoreTextB"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="50dp"
-        android:layout_alignBottom="@id/videoView2"
-        android:layout_marginBottom="-80dp"
-        android:text=" [Team B] " />
-
-    <TextView
-        android:id="@+id/williams_79_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextB"
-        android:layout_marginBottom="-60dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="50dp"
-        android:background="@color/white"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:text=" Williams (79') "
-        />
 
 
     <Button
@@ -119,7 +35,7 @@
     <VideoView
         android:id="@+id/videoView2"
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:visibility="invisible"
         />
@@ -146,6 +62,90 @@
         android:background="@color/white"
         android:text="" />
 
+
+
+    <TextView
+        android:id="@+id/scoreTextA"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:text=" Team A " />
+
+    <TextView
+        android:id="@+id/messi_20_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/scoreTextA"
+        android:layout_marginBottom="-40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:background="@color/white"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:text=" Messi (20') "
+        />
+
+    <TextView
+        android:id="@+id/neymar_36_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/scoreTextA"
+        android:layout_marginBottom="-80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:background="@color/white"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:text=" Neymar (36') "
+        />
+
+    <TextView
+        android:id="@+id/messi_76_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/scoreTextA"
+        android:layout_marginBottom="-120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:background="@color/white"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:text=" Messi (76') "
+        />
+
+
+    <TextView
+        android:id="@+id/scoreTextB"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:text=" Team B " />
+
+    <TextView
+        android:id="@+id/williams_79_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/scoreTextB"
+        android:layout_marginBottom="-40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:text=" Williams (79') "
+        />
 
 
 </RelativeLayout>

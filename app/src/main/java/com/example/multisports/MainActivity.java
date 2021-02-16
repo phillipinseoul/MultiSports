@@ -14,7 +14,7 @@ import android.widget.VideoView;
 public class MainActivity extends AppCompatActivity {
 
     Button inplayBtn, goalBtn, angleBtn, goal1, goal2, goal3, goal4;
-    TextView firstText, secondText;
+    TextView firstText, secondText, goal_1, goal_2, goal_3, goal_4;
     int videoTime = 0;
 
     @Override
@@ -58,21 +58,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Click Inplay Button
-        inplayBtn = (Button) findViewById(R.id.InPlay);
-
-        inplayBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                firstText = (TextView) findViewById(R.id.firstText);
-                firstText.setText(" In-Play ");
-
-                videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);
-                mediaController.hide();
-                videoView1.seekTo(videoTime);
-            }
-        });
-
 
         // Click Change Angle Button
         angleBtn = (Button) findViewById(R.id.ChangeAngle);
@@ -99,13 +84,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Watch each goal replay
-        goal1 = (Button) findViewById(R.id.messi_20);
-        goal2 = (Button) findViewById(R.id.neymar_36);
-        goal3 = (Button) findViewById(R.id.messi_76);
-        goal4 = (Button) findViewById(R.id.williams_79);
+        // Landscape Mode
+        goal_1 = (TextView) findViewById(R.id.messi_20_1);
+        goal_2 = (TextView) findViewById(R.id.neymar_36_1);
+        goal_3 = (TextView) findViewById(R.id.messi_76_1);
+        goal_4 = (TextView) findViewById(R.id.williams_79_1);
 
-        goal1.setOnClickListener(new View.OnClickListener() {
+        goal_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 secondText = (TextView) findViewById(R.id.secondText);
@@ -117,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        goal2.setOnClickListener(new View.OnClickListener() {
+        goal_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 secondText = (TextView) findViewById(R.id.secondText);
@@ -129,8 +114,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        goal3.setOnClickListener(new View.OnClickListener() {
+        goal_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 secondText = (TextView) findViewById(R.id.secondText);
@@ -142,8 +126,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        goal4.setOnClickListener(new View.OnClickListener() {
+        goal_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 secondText = (TextView) findViewById(R.id.secondText);
