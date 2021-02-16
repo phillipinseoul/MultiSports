@@ -85,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Landscape Mode
-        goal_1 = (TextView) findViewById(R.id.messi_20_1);
-        goal_2 = (TextView) findViewById(R.id.neymar_36_1);
-        goal_3 = (TextView) findViewById(R.id.messi_76_1);
-        goal_4 = (TextView) findViewById(R.id.williams_79_1);
+        goal_1 = (TextView) findViewById(R.id.goal1);
+        goal_2 = (TextView) findViewById(R.id.goal2);
+        goal_3 = (TextView) findViewById(R.id.goal3);
+        goal_4 = (TextView) findViewById(R.id.goal4);
 
         goal_1.setOnClickListener(new View.OnClickListener() {
             @Override

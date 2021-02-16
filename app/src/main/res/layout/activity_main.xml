@@ -21,86 +21,68 @@
 
 
     <TextView
-        android:id="@+id/scoreTextA"
+        android:id="@+id/Replay"
         android:textSize="30dp"
         android:textColor="@color/black"
         android:background="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp"
+        android:layout_centerHorizontal="true"
         android:layout_alignBottom="@id/videoView2"
         android:layout_marginBottom="-80dp"
-        android:text=" [Team A] " />
+        android:text=" [ Replay ] " />
 
     <TextView
-        android:id="@+id/messi_20_1"
+        android:id="@+id/goal1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextA"
+        android:layout_alignBottom="@id/Replay"
         android:layout_marginBottom="-60dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp"
+        android:layout_centerHorizontal="true"
         android:background="@color/white"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:text=" Messi (20') "
+        android:text=" Goal #1 "
         />
 
     <TextView
-        android:id="@+id/neymar_36_1"
+        android:id="@+id/goal2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextA"
+        android:layout_alignBottom="@id/Replay"
         android:layout_marginBottom="-120dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp"
+        android:layout_centerHorizontal="true"
         android:background="@color/white"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:text=" Neymar (36') "
+        android:text=" Goal #2 "
         />
 
     <TextView
-        android:id="@+id/messi_76_1"
+        android:id="@+id/goal3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextA"
+        android:layout_alignBottom="@id/Replay"
         android:layout_marginBottom="-180dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp"
+        android:layout_centerHorizontal="true"
         android:background="@color/white"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:text=" Messi (76') "
+        android:text=" Goal #3 "
         />
 
 
     <TextView
-        android:id="@+id/scoreTextB"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
+        android:id="@+id/goal4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="50dp"
-        android:layout_alignBottom="@id/videoView2"
-        android:layout_marginBottom="-80dp"
-        android:text=" [Team B] " />
-
-    <TextView
-        android:id="@+id/williams_79_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextB"
-        android:layout_marginBottom="-60dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="50dp"
+        android:layout_alignBottom="@id/Replay"
+        android:layout_marginBottom="-240dp"
+        android:layout_centerHorizontal="true"
         android:background="@color/white"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:text=" Williams (79') "
+        android:text=" Goal #4 "
         />
 
 
