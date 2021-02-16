@@ -2,10 +2,12 @@ package com.example.multisports;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -31,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
         videoView1.start();
 
 
+        // Hide videoView2 when it is finished playing
+        videoView2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                videoView2.setVisibility(RelativeLayout.INVISIBLE);
+                secondText.setText("");
+            }
+        });
+
+
         // Click Inplay Button
         inplayBtn = (Button) findViewById(R.id.InPlay);
 
@@ -52,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
         goalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                videoView2.setVisibility(RelativeLayout.VISIBLE);
+
                 secondText = (TextView) findViewById(R.id.secondText);
                 secondText.setText(" Goal Replay ");
 

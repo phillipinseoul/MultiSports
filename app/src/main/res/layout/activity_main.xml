@@ -53,6 +53,7 @@
         android:layout_height="270dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="130dp"
+        android:visibility="invisible"
         />
 
     <TextView
@@ -61,7 +62,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:layout_alignTop="@id/Linear1"
-        android:layout_alignLeft="@id/Linear1"
+        android:layout_alignParentRight="true"
         android:background="@color/white"
         android:text=" In-Play " />
 
@@ -71,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignTop="@id/videoView2"
         android:background="@color/white"
         android:text="" />
