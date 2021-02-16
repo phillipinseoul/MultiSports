@@ -13,8 +13,8 @@ import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button inplayBtn, goalBtn, angleBtn;
-    TextView firstText, secondText;
+    Button inplayBtn, goalBtn, angleBtn, goal1, goal2, goal3, goal4;
+    TextView firstText, secondText, scoreText;
     int videoTime = 0;
 
     @Override
@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 videoView2.setVisibility(RelativeLayout.INVISIBLE);
+
+                goal1.setVisibility(RelativeLayout.VISIBLE);
+                goal2.setVisibility(RelativeLayout.VISIBLE);
+                goal3.setVisibility(RelativeLayout.VISIBLE);
+                goal4.setVisibility(RelativeLayout.VISIBLE);
+                scoreText.setVisibility(RelativeLayout.VISIBLE);
+
+                secondText = (TextView) findViewById(R.id.secondText);
                 secondText.setText("");
             }
         });
@@ -78,6 +86,13 @@ public class MainActivity extends AppCompatActivity {
         goalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                goal1.setVisibility(RelativeLayout.INVISIBLE);
+                goal2.setVisibility(RelativeLayout.INVISIBLE);
+                goal3.setVisibility(RelativeLayout.INVISIBLE);
+                goal4.setVisibility(RelativeLayout.INVISIBLE);
+                scoreText.setVisibility(RelativeLayout.INVISIBLE);
+
+
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
 
                 secondText = (TextView) findViewById(R.id.secondText);
@@ -95,6 +110,13 @@ public class MainActivity extends AppCompatActivity {
         angleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                goal1.setVisibility(RelativeLayout.INVISIBLE);
+                goal2.setVisibility(RelativeLayout.INVISIBLE);
+                goal3.setVisibility(RelativeLayout.INVISIBLE);
+                goal4.setVisibility(RelativeLayout.INVISIBLE);
+                scoreText.setVisibility(RelativeLayout.INVISIBLE);
+
+
                 videoTime = videoView1.getCurrentPosition();        // Remember current time
 
                 firstText = (TextView) findViewById(R.id.firstText);
@@ -111,5 +133,93 @@ public class MainActivity extends AppCompatActivity {
                 videoView2.start();
             }
         });
+
+
+        // Watch each goal replay
+        goal1 = (Button) findViewById(R.id.messi_20);
+        goal2 = (Button) findViewById(R.id.neymar_36);
+        goal3 = (Button) findViewById(R.id.messi_76);
+        goal4 = (Button) findViewById(R.id.williams_79);
+        scoreText = (TextView) findViewById(R.id.scoreText);
+
+        goal1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goal1.setVisibility(RelativeLayout.INVISIBLE);
+                goal2.setVisibility(RelativeLayout.INVISIBLE);
+                goal3.setVisibility(RelativeLayout.INVISIBLE);
+                goal4.setVisibility(RelativeLayout.INVISIBLE);
+                scoreText.setVisibility(RelativeLayout.INVISIBLE);
+
+                secondText = (TextView) findViewById(R.id.secondText);
+                secondText.setText(" Goal #1 ");
+
+                videoView2.setVisibility(RelativeLayout.VISIBLE);
+                videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal1);
+                videoView2.start();
+            }
+        });
+
+        goal2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goal1.setVisibility(RelativeLayout.INVISIBLE);
+                goal2.setVisibility(RelativeLayout.INVISIBLE);
+                goal3.setVisibility(RelativeLayout.INVISIBLE);
+                goal4.setVisibility(RelativeLayout.INVISIBLE);
+                scoreText.setVisibility(RelativeLayout.INVISIBLE);
+
+                secondText = (TextView) findViewById(R.id.secondText);
+                secondText.setText(" Goal #2 ");
+
+                videoView2.setVisibility(RelativeLayout.VISIBLE);
+                videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal2);
+                videoView2.start();
+            }
+        });
+
+
+        goal3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goal1.setVisibility(RelativeLayout.INVISIBLE);
+                goal2.setVisibility(RelativeLayout.INVISIBLE);
+                goal3.setVisibility(RelativeLayout.INVISIBLE);
+                goal4.setVisibility(RelativeLayout.INVISIBLE);
+                scoreText.setVisibility(RelativeLayout.INVISIBLE);
+
+
+                secondText = (TextView) findViewById(R.id.secondText);
+                secondText.setText(" Goal #3 ");
+
+
+                videoView2.setVisibility(RelativeLayout.VISIBLE);
+                videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal3);
+                videoView2.start();
+            }
+        });
+
+
+        goal4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goal1.setVisibility(RelativeLayout.INVISIBLE);
+                goal2.setVisibility(RelativeLayout.INVISIBLE);
+                goal3.setVisibility(RelativeLayout.INVISIBLE);
+                goal4.setVisibility(RelativeLayout.INVISIBLE);
+                scoreText.setVisibility(RelativeLayout.INVISIBLE);
+
+                secondText = (TextView) findViewById(R.id.secondText);
+                secondText.setText(" Goal #4 ");
+
+                videoView2.setVisibility(RelativeLayout.VISIBLE);
+                videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal4);
+                videoView2.start();
+            }
+        });
+
+
+
+
     }
 }

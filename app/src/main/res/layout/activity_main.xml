@@ -1,40 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_alignBottom="@id/Linear1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-
-    <Button
-        android:id="@+id/GoalReplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:text="Goal Replay" />
-
-    <Button
-        android:id="@+id/ChangeAngle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:text="Change Angle" />
-
-    <Button
-        android:id="@+id/InPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="70dp"
-        android:text="In-Play" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,6 +19,39 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
+
+    <Button
+        android:id="@+id/GoalReplay"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:textSize="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Goal Replay" />
+
+    <Button
+        android:id="@+id/ChangeAngle"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:textSize="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Change Angle" />
+
+    <Button
+        android:id="@+id/InPlay"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:textSize="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="In-Play" />
+
     <VideoView
         android:id="@+id/videoView2"
         android:layout_width="match_parent"
@@ -55,6 +60,7 @@
         android:layout_marginBottom="130dp"
         android:visibility="invisible"
         />
+
 
     <TextView
         android:id="@+id/firstText"
@@ -76,6 +82,70 @@
         android:layout_alignTop="@id/videoView2"
         android:background="@color/white"
         android:text="" />
+
+
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/videoView2"
+        android:text=" Team A      3 - 1      Team B " />
+
+    <Button
+        android:id="@+id/messi_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/scoreText"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="-55dp"
+        android:text="Messi (20')"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:backgroundTint="@color/white" />
+
+    <Button
+        android:id="@+id/neymar_36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/scoreText"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="-110dp"
+        android:text="Neymar (36')"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:backgroundTint="@color/white" />
+
+    <Button
+        android:id="@+id/messi_76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/scoreText"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="-166dp"
+        android:text="Messi (76')"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:backgroundTint="@color/white" />
+
+    <Button
+        android:id="@+id/williams_79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/scoreText"
+        android:layout_marginBottom="-55dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:text="Williams (79')"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:backgroundTint="@color/white" />
 
 
 </RelativeLayout>
