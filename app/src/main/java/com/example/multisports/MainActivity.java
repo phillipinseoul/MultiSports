@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 secondText.setText(" Goal #1 ");
 
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
+                videoView2.bringToFront();
                 videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal1);
                 videoView2.start();
             }
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 secondText.setText(" Goal #2 ");
 
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
+                videoView2.bringToFront();
                 videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal2);
                 videoView2.start();
             }
@@ -121,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 secondText.setText(" Goal #3 ");
 
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
+                videoView2.bringToFront();
                 videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal3);
                 videoView2.start();
             }
@@ -133,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
                 secondText.setText(" Goal #4 ");
 
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
+                videoView2.bringToFront();
                 videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal4);
                 videoView2.start();
             }

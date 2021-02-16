@@ -21,23 +21,22 @@
 
 
     <TextView
-        android:id="@+id/scoreTextA"
+        android:id="@+id/scoreText"
         android:textSize="30dp"
         android:textColor="@color/black"
         android:background="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp"
+        android:layout_centerHorizontal="true"
         android:layout_alignBottom="@id/videoView2"
         android:layout_marginBottom="-80dp"
-        android:text=" [Team A] " />
+        android:text=" [Team A]     vs     [Team B] " />
 
     <TextView
         android:id="@+id/messi_20_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextA"
+        android:layout_alignBottom="@id/scoreText"
         android:layout_marginBottom="-60dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="50dp"
@@ -51,7 +50,7 @@
         android:id="@+id/neymar_36_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextA"
+        android:layout_alignBottom="@id/scoreText"
         android:layout_marginBottom="-120dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="50dp"
@@ -65,7 +64,7 @@
         android:id="@+id/messi_76_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextA"
+        android:layout_alignBottom="@id/scoreText"
         android:layout_marginBottom="-180dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="50dp"
@@ -77,23 +76,10 @@
 
 
     <TextView
-        android:id="@+id/scoreTextB"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="50dp"
-        android:layout_alignBottom="@id/videoView2"
-        android:layout_marginBottom="-80dp"
-        android:text=" [Team B] " />
-
-    <TextView
         android:id="@+id/williams_79_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/scoreTextB"
+        android:layout_alignBottom="@id/scoreText"
         android:layout_marginBottom="-60dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="50dp"
