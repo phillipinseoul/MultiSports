@@ -56,14 +56,25 @@
         />
 
     <TextView
-        android:id="@+id/inplay"
+        android:id="@+id/firstText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignBottom="@id/Linear1"
+        android:layout_alignTop="@id/Linear1"
+        android:layout_alignLeft="@id/Linear1"
         android:background="@color/white"
         android:text=" In-Play " />
+
+
+    <TextView
+        android:id="@+id/secondText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/videoView2"
+        android:background="@color/white"
+        android:text="" />
 
 
 </RelativeLayout>

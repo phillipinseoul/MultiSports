@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
 
     Button inplayBtn, goalBtn, angleBtn;
+    TextView firstText, secondText;
     int videoTime = 0;
 
     @Override
@@ -35,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         inplayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                firstText = (TextView) findViewById(R.id.firstText);
+                firstText.setText(" In-Play ");
+
                 videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);
                 videoView1.seekTo(videoTime);
             }
@@ -47,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         goalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                secondText = (TextView) findViewById(R.id.secondText);
+                secondText.setText(" Goal Replay ");
+
                 videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal_angle5);
                 videoView2.start();
             }
@@ -60,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 videoTime = videoView1.getCurrentPosition();        // Remember current time
+
+                firstText = (TextView) findViewById(R.id.firstText);
+                firstText.setText(" Angle #1 ");
+
+                secondText = (TextView) findViewById(R.id.secondText);
+                secondText.setText(" Angle #2 ");
 
                 videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal_angle8);
                 videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal_angle7);
