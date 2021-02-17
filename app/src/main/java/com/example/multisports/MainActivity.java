@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         linearLayout.bringToFront();
         videoView1.start();
 
+        firstText = (TextView) findViewById(R.id.firstText);
+        firstText.setVisibility(RelativeLayout.INVISIBLE);
+
 
         // Hide videoView2 when it is finished playing
         videoView2.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
