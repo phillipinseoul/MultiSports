@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
@@ -11,7 +12,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import java.io.File;
+
 public class MainActivity extends AppCompatActivity {
+
 
     Button inplayBtn, goalBtn, angleBtn, goal1, goal2, goal3, goal4;
     TextView firstText, secondText, goal_1, goal_2, goal_3, goal_4;
@@ -19,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+//        String absolutePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+//        String newPath = absolutePath + "/Android/data/com.example/multisports";
+//        File path = new File (newPath);
+//        if (!(path.exists())) {
+//            path.mkdir();
+//        }
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -145,8 +158,6 @@ public class MainActivity extends AppCompatActivity {
                 videoView2.start();
             }
         });
-
-
 
 
     }
