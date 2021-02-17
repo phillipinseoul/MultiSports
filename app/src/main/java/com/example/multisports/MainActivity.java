@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -19,24 +20,20 @@ public class MainActivity extends AppCompatActivity {
 
     Button inplayBtn, goalBtn, angleBtn, goal1, goal2, goal3, goal4;
     TextView firstText, secondText, goal_1, goal_2, goal_3, goal_4;
+    LinearLayout linearLayout;
     int videoTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-//        String absolutePath = Environment.getExternalStorageDirectory().getAbsolutePath();
-//        String newPath = absolutePath + "/Android/data/com.example/multisports";
-//        File path = new File (newPath);
-//        if (!(path.exists())) {
-//            path.mkdir();
-//        }
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         VideoView videoView1 = (VideoView) findViewById(R.id.videoView1);
         VideoView videoView2 = (VideoView) findViewById(R.id.videoView2);
+
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.Linear1);
 
         videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);  // Set the path of the video "messi_highlights"
 
@@ -44,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mediaController.setAnchorView(videoView1);         // Link mediaController to videoView
         videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
         mediaController.hide();
+        linearLayout.bringToFront();
         videoView1.start();
 
 
