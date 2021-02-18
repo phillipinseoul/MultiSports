@@ -18,10 +18,11 @@ import java.io.File;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button inplayBtn, goalBtn, angleBtn, goal1, goal2, goal3, goal4;
+    Button inplayBtn, goalBtn, angleBtn, replayBtn, goal1, goal2, goal3, goal4;
     TextView firstText, secondText, goal_1, goal_2, goal_3, goal_4;
     LinearLayout linearLayout;
     int videoTime = 0;
+    int flag = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +95,57 @@ public class MainActivity extends AppCompatActivity {
 
                 videoView1.start();
                 videoView2.start();
+            }
+        });
+
+
+        // Click Repaly Button
+        replayBtn = (Button) findViewById(R.id.replayBtn);
+
+        replayBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (flag == 0) {
+                    secondText = (TextView) findViewById(R.id.secondText);
+                    secondText.setText(" Goal #1 (Replay) ");
+
+                    videoView2.setVisibility(RelativeLayout.VISIBLE);
+                    videoView2.bringToFront();
+                    secondText.bringToFront();
+                    videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal1);
+                    videoView2.start();
+                } else if (flag == 1) {
+                    secondText = (TextView) findViewById(R.id.secondText);
+                    secondText.setText(" Goal #2 (Replay) ");
+
+                    videoView2.setVisibility(RelativeLayout.VISIBLE);
+                    videoView2.bringToFront();
+                    secondText.bringToFront();
+                    videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal2);
+                    videoView2.start();
+                } else if (flag == 2) {
+                    secondText = (TextView) findViewById(R.id.secondText);
+                    secondText.setText(" Goal #3 (Replay) ");
+
+                    videoView2.setVisibility(RelativeLayout.VISIBLE);
+                    videoView2.bringToFront();
+                    secondText.bringToFront();
+                    videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal3);
+                    videoView2.start();
+
+                } else if (flag == 3){
+                    secondText = (TextView) findViewById(R.id.secondText);
+                    secondText.setText(" Goal #4 (Replay) ");
+
+                    videoView2.setVisibility(RelativeLayout.VISIBLE);
+                    videoView2.bringToFront();
+                    secondText.bringToFront();
+                    videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal4);
+                    videoView2.start();
+
+                    flag = 0;
+                }
             }
         });
 

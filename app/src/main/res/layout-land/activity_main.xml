@@ -25,17 +25,6 @@
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/ChangeAngle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="Multi Angle" />
-
-
     <VideoView
         android:id="@+id/videoView2"
         android:layout_width="wrap_content"
@@ -137,6 +126,34 @@
         android:textColor="@color/white"
         android:text=" Goal #1 (79') "
         />
+
+
+    <Button
+        android:id="@+id/ChangeAngle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="150dp"
+        android:text="Multi Angle" />
+
+
+
+    <Button
+        android:id="@+id/replayBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="150dp"
+        android:text="Replay"
+        />
+
+
 
 
 </RelativeLayout>
