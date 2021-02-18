@@ -18,8 +18,8 @@ import java.io.File;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button inplayBtn, goalBtn, angleBtn, replayBtn, goal1, goal2, goal3, goal4;
-    TextView firstText, secondText, goal_1, goal_2, goal_3, goal_4;
+    Button inplayBtn, goalBtn, goal1, goal2, goal3, goal4;
+    TextView firstText, secondText, goal_1, goal_2, goal_3, goal_4, angleBtn, replayBtn;
     LinearLayout linearLayout;
     int videoTime = 0;
     int flag = 0;
@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         VideoView videoView1 = (VideoView) findViewById(R.id.videoView1);
         VideoView videoView2 = (VideoView) findViewById(R.id.videoView2);
+        angleBtn = (TextView) findViewById(R.id.ChangeAngle);
+        replayBtn = (TextView) findViewById(R.id.replayBtn);
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.Linear1);
 
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
         mediaController.hide();
         linearLayout.bringToFront();
+        replayBtn.bringToFront();
+        angleBtn.bringToFront();
+
         videoView1.start();
 
         firstText = (TextView) findViewById(R.id.firstText);
@@ -75,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Click Change Angle Button
-        angleBtn = (Button) findViewById(R.id.ChangeAngle);
+        angleBtn = (TextView) findViewById(R.id.ChangeAngle);
 
         angleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,11 +105,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Click Repaly Button
-        replayBtn = (Button) findViewById(R.id.replayBtn);
+        replayBtn = (TextView) findViewById(R.id.replayBtn);
 
         replayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
 
                 if (flag == 0) {
                     secondText = (TextView) findViewById(R.id.secondText);

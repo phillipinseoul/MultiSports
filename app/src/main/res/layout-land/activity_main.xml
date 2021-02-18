@@ -128,29 +128,31 @@
         />
 
 
-    <Button
+    <TextView
         android:id="@+id/ChangeAngle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
+        android:textSize="25dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="150dp"
-        android:text="Multi Angle" />
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/rounded_corner"
+        android:text="  Multi Angle  " />
 
 
 
-    <Button
+    <TextView
         android:id="@+id/replayBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
+        android:textSize="25dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="150dp"
-        android:text="Replay"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/rounded_corner"
+        android:text="  Replay  "
         />
 
 
