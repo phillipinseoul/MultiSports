@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 secondText = (TextView) findViewById(R.id.secondText);
-                secondText.setText(" Goal #1 ");
+                secondText.setText(" Goal #1 (Replay) ");
 
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
                 videoView2.bringToFront();
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 secondText = (TextView) findViewById(R.id.secondText);
-                secondText.setText(" Goal #2 ");
+                secondText.setText(" Goal #2 (Replay) ");
 
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
                 videoView2.bringToFront();
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 secondText = (TextView) findViewById(R.id.secondText);
-                secondText.setText(" Goal #3 ");
+                secondText.setText(" Goal #3 (Replay) ");
 
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
                 videoView2.bringToFront();
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 secondText = (TextView) findViewById(R.id.secondText);
-                secondText.setText(" Goal #4 ");
+                secondText.setText(" Goal #4 (Replay) ");
 
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
                 videoView2.bringToFront();
