@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout linearLayout;
     int videoTime = 0;
     int flag = 0;
+    MediaController seekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +41,16 @@ public class MainActivity extends AppCompatActivity {
 
         videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);  // Set the path of the video "messi_highlights"
 
+//        MediaController mediaController = new MediaController(this);
+//        mediaController.setAnchorView(videoView1);         // Link mediaController to videoView
+//        videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
+//        mediaController.hide();
+
         MediaController mediaController = new MediaController(this);
-        mediaController.setAnchorView(videoView1);         // Link mediaController to videoView
-        videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
-        mediaController.hide();
+        // mediaController.setMediaPlayer(this);
+        mediaController.setAnchorView((MediaController) findViewById(R.id.seekBar1));
+        videoView1.setMediaController(mediaController);
+
         linearLayout.bringToFront();
         replayBtn.bringToFront();
         angleBtn.bringToFront();
@@ -72,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);
                 videoView1.seekTo(videoTime);
                 videoView1.start();
-                mediaController.hide();
+                // mediaController.hide();
                 firstText.setText(" In-Play ");
             }
         });
