@@ -53,35 +53,36 @@
         android:textSize="30dp"
         android:layout_alignRight="@id/videoView2"
         android:layout_alignTop="@id/videoView2"
-        android:background="@drawable/rounded_corner"
+        android:background="@color/white"
         android:text="" />
 
 
 
     <TextView
         android:id="@+id/scoreText"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/rounded_corner_white"
         android:textSize="30dp"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
-        android:text=" [Team A]        vs        [Team B] " />
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:text="    [Team A]          vs          [Team B]    " />
 
     <TextView
         android:id="@+id/messi_20_1"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_alignBottom="@id/scoreText"
-        android:layout_marginBottom="-60dp"
+        android:layout_marginBottom="-70dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="190dp"
-        android:background="#0660bd"
+        android:background="@drawable/rounded_corner_blue"
         android:textSize="20dp"
         android:textColor="@color/white"
-        android:text=" Goal #1 (20') "
+        android:text="   Goal #1 (20')   "
         />
 
     <TextView
@@ -89,13 +90,13 @@
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_alignBottom="@id/scoreText"
-        android:layout_marginBottom="-120dp"
+        android:layout_marginBottom="-140dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="190dp"
-        android:background="#0660bd"
+        android:background="@drawable/rounded_corner_blue"
         android:textSize="20dp"
         android:textColor="@color/white"
-        android:text=" Goal #2 (36') "
+        android:text="   Goal #2 (36')   "
         />
 
     <TextView
@@ -103,13 +104,13 @@
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_alignBottom="@id/scoreText"
-        android:layout_marginBottom="-180dp"
+        android:layout_marginBottom="-210dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="190dp"
-        android:background="#0660bd"
+        android:background="@drawable/rounded_corner_blue"
         android:textSize="20dp"
         android:textColor="@color/white"
-        android:text=" Goal #3 (76') "
+        android:text="   Goal #3 (76')   "
         />
 
 
@@ -118,13 +119,13 @@
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_alignBottom="@id/scoreText"
-        android:layout_marginBottom="-60dp"
+        android:layout_marginBottom="-70dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="190dp"
-        android:background="#c0111f"
+        android:background="@drawable/rounded_corner_red"
         android:textSize="20dp"
         android:textColor="@color/white"
-        android:text=" Goal #1 (79') "
+        android:text="   Goal #1 (79')   "
         />
 
 
@@ -133,11 +134,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25dp"
+        android:textColor="@color/black"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="100dp"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/rounded_corner_grey"
         android:text="  Multi Angle  " />
 
 
@@ -147,11 +149,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25dp"
+        android:textColor="@color/black"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="100dp"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/rounded_corner_grey"
         android:text="  Replay  "
         />
 

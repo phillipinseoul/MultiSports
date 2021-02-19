@@ -122,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
                     secondText.bringToFront();
                     videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal1);
                     videoView2.start();
+
+                    flag++;
                 } else if (flag == 1) {
                     secondText = (TextView) findViewById(R.id.secondText);
                     secondText.setText(" Goal #2 (Replay) ");
@@ -131,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
                     secondText.bringToFront();
                     videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal2);
                     videoView2.start();
+
+                    flag++;
                 } else if (flag == 2) {
                     secondText = (TextView) findViewById(R.id.secondText);
                     secondText.setText(" Goal #3 (Replay) ");
@@ -141,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
                     videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal3);
                     videoView2.start();
 
+                    flag++;
                 } else if (flag == 3){
                     secondText = (TextView) findViewById(R.id.secondText);
                     secondText.setText(" Goal #4 (Replay) ");
