@@ -67,7 +67,7 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="35dp"
         android:gravity="center_vertical"
         android:text="    [Team A]          vs          [Team B]    " />
 
@@ -158,6 +158,11 @@
         android:text="  Replay  "
         />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
 
 
 
