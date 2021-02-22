@@ -46,11 +46,6 @@ public class MainActivity extends AppCompatActivity {
 //        videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
 //        mediaController.hide();
 
-        MediaController mediaController = new MediaController(this);
-        // mediaController.setMediaPlayer(this);
-        mediaController.setAnchorView((MediaController) findViewById(R.id.seekBar1));
-        videoView1.setMediaController(mediaController);
-
         linearLayout.bringToFront();
         replayBtn.bringToFront();
         angleBtn.bringToFront();
