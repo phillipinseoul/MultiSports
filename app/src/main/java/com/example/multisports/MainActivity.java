@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     Button inplayBtn, goalBtn, goal1, goal2, goal3, goal4;
-    TextView firstText, secondText, goal_1, goal_2, goal_3, goal_4, angleBtn, replayBtn;
+    TextView firstText, secondText, goal_1, goal_2, goal_3, goal_4, angleBtn, replayBtn, goBackBtn;
     LinearLayout linearLayout;
     int videoTime = 0;
     int flag = 0;
@@ -41,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
         videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);  // Set the path of the video "messi_highlights"
 
-//        MediaController mediaController = new MediaController(this);
-//        mediaController.setAnchorView(videoView1);         // Link mediaController to videoView
-//        videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
-//        mediaController.hide();
-
         MediaController mediaController = new MediaController(this);
-        // mediaController.setMediaPlayer(this);
-        mediaController.setAnchorView((MediaController) findViewById(R.id.seekBar1));
-        videoView1.setMediaController(mediaController);
+        mediaController.setAnchorView(videoView1);         // Link mediaController to videoView
+        videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
+        mediaController.hide();
+
+//        MediaController mediaController = new MediaController(this);
+//        // mediaController.setMediaPlayer(this);
+//        mediaController.setAnchorView((MediaController) findViewById(R.id.seekBar1));
+//        videoView1.setMediaController(mediaController);
 
         linearLayout.bringToFront();
         replayBtn.bringToFront();
@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
                 secondText = (TextView) findViewById(R.id.secondText);
                 secondText.setText("");
+                goBackBtn.setText("");
             }
         });
 
@@ -111,6 +112,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        goBackBtn = (TextView) findViewById(R.id.goBack);
+
+        // Landscape Mode
+        goal_1 = (TextView) findViewById(R.id.messi_20_1);
+        goal_2 = (TextView) findViewById(R.id.neymar_36_1);
+        goal_3 = (TextView) findViewById(R.id.messi_76_1);
+        goal_4 = (TextView) findViewById(R.id.williams_79_1);
+
+
         // Click Repaly Button
         replayBtn = (TextView) findViewById(R.id.replayBtn);
 
@@ -124,9 +134,13 @@ public class MainActivity extends AppCompatActivity {
                     secondText = (TextView) findViewById(R.id.secondText);
                     secondText.setText(" Goal #1 (Replay) ");
 
+                    goBackBtn.setText("Go Back");
+
                     videoView2.setVisibility(RelativeLayout.VISIBLE);
                     videoView2.bringToFront();
                     secondText.bringToFront();
+
+                    goBackBtn.bringToFront();
                     videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal1);
                     videoView2.start();
 
@@ -135,9 +149,13 @@ public class MainActivity extends AppCompatActivity {
                     secondText = (TextView) findViewById(R.id.secondText);
                     secondText.setText(" Goal #2 (Replay) ");
 
+                    goBackBtn.setText("Go Back");
+
                     videoView2.setVisibility(RelativeLayout.VISIBLE);
                     videoView2.bringToFront();
                     secondText.bringToFront();
+
+                    goBackBtn.bringToFront();
                     videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal2);
                     videoView2.start();
 
@@ -146,9 +164,13 @@ public class MainActivity extends AppCompatActivity {
                     secondText = (TextView) findViewById(R.id.secondText);
                     secondText.setText(" Goal #3 (Replay) ");
 
+                    goBackBtn.setText("Go Back");
+
                     videoView2.setVisibility(RelativeLayout.VISIBLE);
                     videoView2.bringToFront();
                     secondText.bringToFront();
+
+                    goBackBtn.bringToFront();
                     videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal3);
                     videoView2.start();
 
@@ -157,9 +179,13 @@ public class MainActivity extends AppCompatActivity {
                     secondText = (TextView) findViewById(R.id.secondText);
                     secondText.setText(" Goal #4 (Replay) ");
 
+                    goBackBtn.setText("Go Back");
+
                     videoView2.setVisibility(RelativeLayout.VISIBLE);
                     videoView2.bringToFront();
                     secondText.bringToFront();
+
+                    goBackBtn.bringToFront();
                     videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal4);
                     videoView2.start();
 
@@ -169,21 +195,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Landscape Mode
-        goal_1 = (TextView) findViewById(R.id.messi_20_1);
-        goal_2 = (TextView) findViewById(R.id.neymar_36_1);
-        goal_3 = (TextView) findViewById(R.id.messi_76_1);
-        goal_4 = (TextView) findViewById(R.id.williams_79_1);
-
         goal_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 secondText = (TextView) findViewById(R.id.secondText);
                 secondText.setText(" Goal #1 (Replay) ");
 
+                goBackBtn.setText("Go Back");
+
                 videoView2.setVisibility(RelativeLayout.VISIBLE);
                 videoView2.bringToFront();
                 secondText.bringToFront();
+                goBackBtn.bringToFront();
                 videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal1);
                 videoView2.start();
             }
@@ -228,6 +251,16 @@ public class MainActivity extends AppCompatActivity {
                 secondText.bringToFront();
                 videoView2.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.goal4);
                 videoView2.start();
+            }
+        });
+
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                videoView2.stopPlayback();
+                videoView2.setVisibility(RelativeLayout.INVISIBLE);
+                goBackBtn.setText("");
+                secondText.setText("");
             }
         });
 
