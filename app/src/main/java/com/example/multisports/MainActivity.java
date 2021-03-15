@@ -40,8 +40,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.Linear1);
 
         videoView1.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.messi_highlights);  // Set the path of the video "messi_highlights"
-
-<<<<<<< HEAD
+        
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView1);         // Link mediaController to videoView
         videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
@@ -51,12 +50,11 @@ public class MainActivity extends AppCompatActivity {
 //        // mediaController.setMediaPlayer(this);
 //        mediaController.setAnchorView((MediaController) findViewById(R.id.seekBar1));
 //        videoView1.setMediaController(mediaController);
-=======
+
 //        MediaController mediaController = new MediaController(this);
 //        mediaController.setAnchorView(videoView1);         // Link mediaController to videoView
 //        videoView1.setMediaController(mediaController);    // Allow mediaController to control our videoView
 //        mediaController.hide();
->>>>>>> 1c27eb9fbf262a9c8d6c18708013afdc6ad639c0
 
         linearLayout.bringToFront();
         replayBtn.bringToFront();
